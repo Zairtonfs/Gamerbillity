@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+/* Common styles for all screen sizes */
+
+body {
+  font-family: 'Kalam', cursive;
+  margin: 20px;
+  padding: 0;
+  background-image: url(https://i.ibb.co/jy1M5pZ/FUNDO.png);
+}
+
+nav {
+  background-color: #130450;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  padding: 0.8vw;
+  border-radius: 5px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.068);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+}
+
+a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2vw;
+  transition: color 0.3s;
+  margin-left: 2.2vw;
+}
+
+a.active {
+  font-weight: bold;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.icons {
+  display: flex;
+  margin-left: 5vw;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-btn img {
+  width: 1.3vw;
+}
+
+button.profile img {
+  width: 1.3vw;
+  margin-left: 1vw;
+}
+
+button:hover img {
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.search-container {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1vw;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.expand {
+  width: 15vw;
+}
+
+.slider-container {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-top: 5vw;
+  position: relative;
+  margin-right: 20vw;
+  margin-left: 15vw;
+  box-shadow: 6px 6px 6px 6px rgb(65, 44, 161);
+}
+
+.card img {
+  max-width: 45%;
+  max-height: 100%;
+  object-fit: contain;
+  margin-right: 15vw;
+  box-shadow: 2px 2px 4px 4px rgb(65, 44, 161);
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+}
+
+.slider-navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+h2 {
+  color: white;
+  text-align: left;
+  font-size: 1.5vw;
+}
+
+p {
+  color: white;
+  text-align: left;
+  font-size: 0.8vw;
+}
+
+h3 {
+  color: white;
+  text-align: left;
+  font-size: 1vw;
+}
+
+.container {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 2px 2px 4px 4px rgb(65, 44, 161);
+  margin-right: 12vw;
+  margin-left: 12vw;
+}
+
+.title {
+  text-align: center;
+  font-size: 2vw;
+  color: #00E0FF;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.form-row input[type="text"],
+.form-row select {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #00E0FF;
+  outline: none;
+  font-size: 16px;
+  color: #00E0FF;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.form-row input[type="text"]::placeholder,
+.form-row select::placeholder {
+  color: #00E0FF;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 1vw;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border-radius: 10%;
+  border: none;
+  background-color: #00E0FF;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Media queries for different screen sizes */
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for mobile devices */
+  body {
+    margin: 10px;
+  }
+
+  nav {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 0.5vw;
+  }
+
+  a {
+    font-size: 2.5vw;
+    margin-left: 1vw;
+  }
+
+  .icons {
+    margin-left: 2vw;
+  }
+
+  .search-btn img {
+    width: 3vw;
+  }
+
+  button.profile img {
+    width: 3vw;
+    margin-left: 1vw;
+  }
+
+  .slider-container {
+    height: 50vw;
+  }
+
+  .card {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+
+  .card img {
+    max-width: 80%;
+    margin-right: 5vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  .container {
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .title {
+    font-size: 6vw;
+    margin-bottom: 10px;
+  }
+
+  .form-row input[type="text"],
+  .form-row select {
+    padding: 5px;
+    font-size: 4vw;
+    margin-bottom: 5px;
+  }
+
+  .submit-button {
+    padding: 5px 10px;
+    font-size: 4vw;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-css/style_home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Histórico</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Para empresa</a></li>
+        </ul>
+        <div class="icons">
+          <button class="search-btn" onclick="toggleSearch()">
+            <img src="img/icone_lupa.png" alt="Ícone de lupa">
+          </button>
+          <div class="search-container">
+            <input type="text" placeholder="Pesquisar">
+          </div>
+          <button class="profile"><img src="img/icone_perfil.png" alt="Profile"></button>
+        </div>
+    </nav>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="card">
+                <img src="img/test_card_ac.jpg" alt="imagem do jogo assassins creed">
+                <div class="card-content">
+                    <h2>Assassin's creed</h2>
+                    <h3>Ubisoft</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla fermentum ultrices.</p>
+                    <h2>Acessibilidade</h2>
+                    <p> Teste </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/test_card_crew.jpg" alt="Imagem do jogo the crew">
+                <div class="card-content">
+                    <h2>The Crew</h2>
+                    <h3>Ubisoft</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla fermentum ultrices.</p>
+                    <h2>Acessibilidade</h2>
+                    <p> Teste </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/test_card_gtaV.jpg" alt="Imagem do jogo GTA 5">
+                <div class="card-content">
+                    <h2>GTA V</h2>
+                    <h3>Rockstar Games</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla fermentum ultrices.</p>
+                    <h2>Acessibilidade</h2>
+                    <p> Teste </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/test_card_tlou.jpg" alt="Imagem do jogo The last of us">
+                <div class="card-content">
+                    <h2>The last of us</h2>
+                    <h3>Naughty Dog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla fermentum ultrices.</p>
+                    <h2>Acessibilidade</h2>
+                    <p> Teste </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/teste_card_fifa.jpg" alt="Imagem do jogo Fifa 23">
+                <div class="card-content">
+                    <h2 class="">Fifa 23</h2>
+                    <h3>EA</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla fermentum ultrices.</p>
+                    <h2>Acessibilidade</h2>
+                    <p> Teste </p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-navigation">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">Tem algo a dizer?</h1>
+        <div class="form-row">
+          <div class="form-column">
+            <input type="text" id="campo1" placeholder="Informe o assunto:">
+            <input type="text" id="campo2" placeholder="Bote as ideias pra fora!">
+          </div>
+          <div class="form-column">
+            <input type="text" id="campo3" placeholder="Qual seria o problema?">
+            <select id="campo4">
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="submit-button-container">
+          <h2 class="title">Já acabou?</h2>
+          <button class="submit-button" onclick="enviarFormulario()">Enviar</button>
+        </div>
+      </div>
+
+      <script src="js/script_home.js"></script>
+</body>
+</html>
